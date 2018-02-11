@@ -4,7 +4,6 @@ import {
 	toUpper, head, tail, reduce, mapObjIndexed, values 
 } from 'ramda'
 import { withStateHandlers } from 'recompose'
-import { connect } from 'react-redux'
 
 export const simpleTextInputStateHandlers = (initials) => {
 	const setCapitalize = compose(concat('set'), join(''), juxt([compose(toUpper, head), tail]))
@@ -19,13 +18,6 @@ export const simpleTextInputStateHandlers = (initials) => {
 
 	return withStateHandlers(initials, ret)
 }
-
-export const fConnect = curry(
-	(mapStateToProps, mapDispatchToProps, Component) => {
-		const Connected = connect(mapStateToProps, mapDispatchToProps)(Component)
-		return props => <Connected {...props}/>
-	}
-)
 
 export const surround = Surround => 
 	Component => props => <Surround {...props}><Component/></Surround>

@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Observable } from 'rxjs'
 import { compose, map, pick, prop } from 'ramda'
 import Form from './Form'
