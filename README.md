@@ -2,4 +2,4 @@ Example functional reactive application for demonstrating github api (github use
 
 By using react, redux, redux-observables, recompose.
 
-Always using functional components to get benefit from functional concepts.
+Always using functional components to get benefit from functional programming concepts.
